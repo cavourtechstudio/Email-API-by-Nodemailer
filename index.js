@@ -24,9 +24,9 @@ app.post('/api/email', (req, res) => {
         }
     });
 //You may customize your content
-    const msghtml = `Dear ${sendemail.receivername}<br/><br/>Happy New Year!<br/><br/>${sendemail.text}<br/><br/>
-Warm Regards<br/><br/>${sendemail.sendername}<br/>${Date()}<br/>
-Sent out by NodeJS API`;
+    const msghtml = `<p>Dear ${sendemail.receivername}</p><p>${sendemail.text}</p>
+<p>Warm Regards</p><p>${sendemail.sendername}</p><p>${Date()}</p>
+<p>Sent out by NodeJS API</p>`;
 
     const mailOptions = {
         from: '', //Your Sender Address in Alibaba Cloud DirectMail Service
